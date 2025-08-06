@@ -22,7 +22,7 @@ const userschema = new mongoose.Schema({
         required: [true, "address is required"],
     },
     mobile: {
-        type: String,
+        type: Number,
         required: [true, "mobile is required"],
     },
 })
