@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, {Schema} from "mongoose";
 import Userrequest from "./UserRequestModel.js";
 
 const userschema = new mongoose.Schema({

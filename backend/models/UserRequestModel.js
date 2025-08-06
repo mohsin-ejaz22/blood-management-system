@@ -36,7 +36,7 @@ const userrequestschema = new mongoose.Schema({
     },
 
     profilepic: {
-        type: string,
+        type: String,
         required: [true, "profilepic is required"],
     },
 })
