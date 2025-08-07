@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Userrequest from "./UserRequestModel.js";
 
 const userschema = new mongoose.Schema({
     name: {
@@ -25,7 +26,20 @@ const userschema = new mongoose.Schema({
         type: Number,
         required: [true, "mobile is required"],
     },
+    userrequests: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Userrequest",
+        },
+      ],
 })
+
+userschema.post("findOneAndDelete", async(user)=>{
+    if(user){
+      await Userrequest.deleteMany({_id: {$in: user.userrequests}});
+    }
+  });
+
 
 const User = mongoose.model("User", userschema);
 export default User;
