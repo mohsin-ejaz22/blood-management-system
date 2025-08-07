@@ -1,9 +1,14 @@
 import { Router } from "express";
+import UserController from "./controller/UserController";
 
 
 const router = Router();
 
-//for Employee
-// router.post("/create/employee", EmployeeController.createEmployee);
+//for User
+router.post("/user/create", UserController.createUser);
+router.get("/users", UserController.showUsers);
+router.get("/user/:id", UserController.showUser);
+router.post("/user/edit/:id", UserController.editUser);
+router.post("/user/delete/:id", UserController.deleteUser);
 
 export default router;
