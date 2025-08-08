@@ -2,7 +2,6 @@ import { Router } from "express";
 import UserController from "./controller/UserController.js";
 import UserRequestController from "./controller/UserRequestController.js";
 
-
 const router = Router();
 
 //for User:
@@ -15,5 +14,7 @@ router.post("/user/delete/:id", UserController.deleteUser);
 //for UserRequest:
 router.post("/users/:id/userrequests/", UserRequestController.createuserrequest);
 router.delete("/users/:id/userrequests/:userrequestId", UserRequestController.deleteuserrequest);
+
+//...
 
 export default router;
