@@ -77,6 +77,17 @@ export default {
 
     try {
       await User.findByIdAndUpdate(id, { $pull: { userrequests: userrequestId } });
+
+      const existingUserrequest = await Userrequest.findById(userrequestId);
+
+      if (existingUserrequest.profilepic) {
+        try {
+          await fs.unlink(path.join(__dirname, '..', existingUserrequest.profilepic));
+        } catch (err) {
+          console.error('Failed to delete old file:', err);
+        }
+      }
+
       await Userrequest.findByIdAndDelete(userrequestId);
       return res.status(200).json({ message: "Userrequest deleted successfully!" });
     } catch (error) {
