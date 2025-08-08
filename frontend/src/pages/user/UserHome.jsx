@@ -11,18 +11,18 @@ const UserHome = () => {
     rejected: "",
   });
 
-  useEffect(() => {
-    const fetchDashboardStats = async () => {
-      try {
-        const response = await axios.get('http://localhost:9000/patient/dashboard-stats');
-        setStats(response.data);
-      } catch (error) {
-        console.error('Failed to fetch dashboard stats:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchDashboardStats = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:9000/patient/dashboard-stats');
+  //       setStats(response.data);
+  //     } catch (error) {
+  //       console.error('Failed to fetch dashboard stats:', error);
+  //     }
+  //   };
 
-    fetchDashboardStats();
-  }, []);
+  //   fetchDashboardStats();
+  // }, []);
 
   return (
     <div className="d-flex bg-light">

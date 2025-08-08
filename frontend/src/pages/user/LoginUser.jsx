@@ -36,7 +36,7 @@ const LoginUser = () => {
     data.append("password", formData.password);
 
     axios
-      .post("http://localhost:3000/user/login", data)
+      .post("http://localhost:9000/user/login", data)
       .then((response) => {
         console.log(response)
         if (response) {

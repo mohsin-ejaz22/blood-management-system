@@ -15,7 +15,13 @@ app.use(express.json());
 app.use(fileUpload({
     createParentPath: true
   }));
-  app.use(cors());
+
+const corsOption = {
+    origin: "http://localhost:5173",
+    credentials: true,
+    optionSuccessStatus: 200
+}
+app.use(cors(corsOption));
 
 app.use(routes);
 

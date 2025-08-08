@@ -74,7 +74,7 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link d-flex align-items-center gap-1" to="/patient/patienthome">
+            <Link className="nav-link d-flex align-items-center gap-1" to="/user/userhome">
               Patient <FaSignInAlt />
               {/* <PatientHome/> */}
             </Link>
@@ -82,6 +82,10 @@ const Navbar = () => {
           <li>
                   <Link className="dropdown-item" id='delete-btn' onClick={handleLogout}>Logout</Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" id='delete-btn' to="/user/login">Login</Link>
+                </li>
+
 
           {/* <li className="nav-item">
             <Link className="nav-link d-flex align-items-center gap-1" to="/signup">
