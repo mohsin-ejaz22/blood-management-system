@@ -12,7 +12,7 @@ router.post("/user/edit/:id", UserController.editUser);
 router.post("/user/delete/:id", UserController.deleteUser);
 
 //for UserRequest:
-router.post("/users/:id/userrequests/", UserRequestController.createuserrequest);
+router.post("/users/:id/userrequests", UserRequestController.createuserrequest);
 router.delete("/users/:id/userrequests/:userrequestId", UserRequestController.deleteuserrequest);
 
 //...
