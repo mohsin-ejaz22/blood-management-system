@@ -21,9 +21,9 @@ export default {
       mobile,
     } = req.body;
 
-    const profilepic = req.files ? req.files.img : null;
-    const profilepicPath = img
-      ? `uploads/${Date.now()}${path.extname(img.name)}`
+    const profilepic = req.files ? req.files.profilepic : null;
+    const profilepicPath = profilepic
+      ? `uploads/${Date.now()}${path.extname(profilepic.name)}`
       : null;
 
     try {
