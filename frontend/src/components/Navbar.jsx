@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaHome, FaSignInAlt } from "react-icons/fa";
 import axios from "axios";
 import Swal from "sweetalert2";
-import PatientHome from "../pages/patient/PatientHome";
+import PatientHome from "../pages/user/UserHome";
 
 const Navbar = () => {
   // const { user, removeUser } = useUser();

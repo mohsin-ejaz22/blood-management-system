@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import PatientSidebar from './PatientSidebar';
+import UserSidebar from './UserSidebar';
 
-const PatientRequestForm = () => {
+const UserRequestForm = () => {
   const [formData, setFormData] = useState({
     Patientname: '',
     age: '',
@@ -50,7 +50,7 @@ const PatientRequestForm = () => {
   return (
     <div className='d-flex'>
 
-     <PatientSidebar/>
+     <UserSidebar/>
    
     <div className="container mt-2">
       <div className="row justify-content-center">
@@ -108,4 +108,4 @@ const PatientRequestForm = () => {
   );
 };
 
-export default PatientRequestForm;
+export default UserRequestForm;

@@ -5,7 +5,7 @@ import { MdOutlineAddBox } from "react-icons/md";
 import { AiFillFileExcel } from "react-icons/ai";
 import { FaUserPlus } from "react-icons/fa";
 
-const PatientSidebar = () => {
+const UserSidebar = () => {
   return (
     <div className="bg-secondary text-white p-4" style={{ width: "250px", minHeight: "100vh" }}>
       <nav>
@@ -35,4 +35,4 @@ const PatientSidebar = () => {
   );
 };
 
-export default PatientSidebar;
+export default UserSidebar;

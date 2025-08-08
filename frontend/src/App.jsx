@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PatientHome from "./pages/patient/PatientHome";
-import Navbar from "./components/Navbar"; // Make sure Navbar is imported
+import Navbar from "./components/Navbar"; 
 import Home from "./pages/Home";
-import PatientRequestForm from "./pages/patient/PatientRequestForm";
+import UserHome from "./pages/user/UserHome";
+import UserRequestForm from "./pages/user/UserRequestForm";
 
 const App = () => {
   return (
@@ -13,9 +13,8 @@ const App = () => {
         <div className=" ">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/patient/patienthome" element={<PatientHome />} />
-            <Route path="/patient/patienthome" element={<PatientHome />} />
-            <Route path="/patient/request-form" element={<PatientRequestForm />} />
+            <Route path="/user/userhome" element={<UserHome />} />
+            <Route path="/user/request-form" element={<UserRequestForm />} />
           </Routes>
         </div>
       </div>

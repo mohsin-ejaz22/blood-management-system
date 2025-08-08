@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PatientSidebar from './PatientSidebar';
+import PatientSidebar from './UserSidebar';
 import { FaSyncAlt, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
-const PatientHome = () => {
+const UserHome = () => {
   const [stats, setStats] = useState({
     requestMade: "",
     pending: "",
@@ -74,4 +74,4 @@ const PatientHome = () => {
   );
 };
 
-export default PatientHome;
+export default UserHome;
