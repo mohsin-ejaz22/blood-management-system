@@ -5,7 +5,7 @@ import Userrequest from "../models/UserRequestModel.js";
 export default {
   // for creating new request:
   async createuserrequest(req, res) {
-    const { id, user_ID } = req.params;
+    const { id } = req.params;
 
     if (!ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid User ID" });
