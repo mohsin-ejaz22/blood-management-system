@@ -12,13 +12,13 @@ const PatientSidebar = () => {
         <ul className="nav flex-column gap-3">
 
           <li className="nav-item">
-            <Link to="/add-student" className="btn btn-info w-100 d-flex align-items-center">
+            <Link to="/patient/patienthome" className="btn btn-info w-100 d-flex align-items-center">
               <MdOutlineAddBox className="me-2 fs-4" />
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/read-students" className="btn btn-info w-100 d-flex align-items-center">
+            <Link to="/patient/request-form" className="btn btn-info w-100 d-flex align-items-center">
               <BiShow className="me-2 fs-4" />
               Make Request
             </Link>

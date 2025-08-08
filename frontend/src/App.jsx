@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PatientHome from "./pages/patient/PatientHome";
 import Navbar from "./components/Navbar"; // Make sure Navbar is imported
 import Home from "./pages/Home";
+import PatientRequestForm from "./pages/patient/PatientRequestForm";
 
 const App = () => {
   return (
@@ -11,8 +12,10 @@ const App = () => {
 
         <div className=" ">
           <Routes>
-            <Route path="/home" element={<Home/>} />
-            <Route path="/patient/home" element={<PatientHome />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/patient/patienthome" element={<PatientHome />} />
+            <Route path="/patient/patienthome" element={<PatientHome />} />
+            <Route path="/patient/request-form" element={<PatientRequestForm />} />
           </Routes>
         </div>
       </div>

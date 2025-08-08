@@ -43,13 +43,13 @@ const Navbar = () => {
 
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-2 align-items-center">
           <li className="nav-item">
-            <Link className="nav-link d-flex align-items-center gap-1" to="/home">
+            <Link className="nav-link d-flex align-items-center gap-1" to="/">
               <FaHome /> Home
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link d-flex align-items-center gap-1" to="/patient/home">
+            <Link className="nav-link d-flex align-items-center gap-1" to="/patient/patienthome">
               Patient <FaSignInAlt />
               {/* <PatientHome/> */}
             </Link>
