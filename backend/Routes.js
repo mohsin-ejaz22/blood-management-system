@@ -11,7 +11,7 @@ router.get("/user/:id", UserController.showUser);
 router.post("/user/edit/:id", UserController.editUser);
 router.post("/user/delete/:id", UserController.deleteUser);
 
-//
+//  login and logout for user
 router.post("/user/login", UserController.Login);
 router.get("/user/logout", UserController.Logout);
 
