@@ -1,6 +1,7 @@
 import { Router } from "express";
 import UserController from "./controller/UserController.js";
 import UserRequestController from "./controller/UserRequestController.js";
+import passport from "passport";
 
 const router = Router();
 
@@ -13,7 +14,7 @@ router.post("/user/delete/:id", UserController.deleteUser);
 
 //  login and logout for user
 router.post("/user/login", UserController.Login);
-router.get("/user/logout", UserController.Logout);
+router.get("/user/logout", passport.authenticate("local"), UserController.Logout);
 
 //for UserRequest:
 router.post("/users/:id/userrequests", UserRequestController.createuserrequest);

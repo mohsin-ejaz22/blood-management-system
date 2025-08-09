@@ -5,6 +5,9 @@ import fileUpload from 'express-fileupload';
 import cors from 'cors'
 import path from 'path';
 import { fileURLToPath } from 'url';
+import passport from "passport"
+import { Strategy as LocalStrategy } from "passport-local";
+/////  from here I left >>>>>
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
