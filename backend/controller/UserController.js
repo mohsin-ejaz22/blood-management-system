@@ -98,6 +98,19 @@ export default{
     } catch(error){
         console.log('error in deleting User: ', error);
     }
-}
+},
+
+// UserLogin :
+async Login(req, res) {
+    res.json({ message: "Login successful", user: req.user });
+  },
+
+  // Logout User
+  async Logout(req, res) {
+    req.logout((err) => {
+      if (err) return res.status(400).json({ error: err.message });
+      res.json({ message: "Logout successfully!" });
+    });
+  },
 }
   

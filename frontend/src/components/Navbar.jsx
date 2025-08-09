@@ -34,6 +34,31 @@ const Navbar = () => {
   //     });
   // };
 
+
+  const handleLogout = async () => {
+    axios.get("http://localhost:3000/user/logout").then((response)=>{
+        console.log(response);
+        if (response) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "You are Logged out in successfully!",
+            showConfirmButton: false,
+            timer: 1000,
+          });
+        }
+        removeUser();
+        navigate("/");
+    }).catch((error)=>{
+      if (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Error in Logged out! try again!",
+        });
+      }
+    });
+};
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom border-3 border-secondary shadow-sm">
       <div className="container-fluid">
@@ -54,6 +79,9 @@ const Navbar = () => {
               {/* <PatientHome/> */}
             </Link>
           </li>
+          <li>
+                  <Link className="dropdown-item" id='delete-btn' onClick={handleLogout}>Logout</Link>
+                </li>
 
           {/* <li className="nav-item">
             <Link className="nav-link d-flex align-items-center gap-1" to="/signup">
